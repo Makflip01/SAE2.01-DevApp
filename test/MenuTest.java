@@ -15,30 +15,28 @@ import javafx.scene.Scene;
  * Le but est d'illustrer comment changer la scène associée associée à la fenêtre
  * principale.
  *
- * Au lancement de l'application, la vue principale contient 2 boutons : addition
- * et soustraction.
+ * Au lancement de l'application, la vue principale contient 3 boutons :
+ * le lancement du jeu, option, règle du jeu.
  * Selon le bouton cliqué, une scène différente prend la place de la vue principale :
- * soit celle de l'addition, soit celle de la soustraction.
- * Sur chacune de ces 2 vues, il y a un bouton retour permettant d'afficher à
+ * soit celle du lancement du jeu, soit celle des options,
+ * soit celle des règles du jeu.
+ * Sur chacune de ces 4 vues, il y a un bouton retour permettant d'afficher à
  * nouveau la vue principale
- * @author Ajuto Matthias
- * @version 1.0
+ * @author Matthias AJUTO
+ * @version 1.1
  *
  */
 public class MenuTest extends Application {
-	/** Scène principale de l'application, celle qui contient les 2 boutons */
+	/** Scène principale de l'application, celle qui contient les 3 boutons */
 	private static Scene scenePrincipale;
 	
-	/** Scène permettant de gérer les options */
+	/** Scène permettant de gérer les option */
 	private static Scene sceneOption;
 	
-	/** Scène permettant de visualiser les règles du jeu */
+	/** Scène permettant de regarder les règles */
 	private static Scene sceneRegle;
 	
-	/** Scène permettant de visualiser le plateau de jeux pour y jouer dessus*/
-	private static Scene scenePlateau;
-	
-	/** Scène permettant de gérer les options de partie */
+	/** Scène permettant de gérer les option de la partie */
 	private static Scene sceneOptionPartie;
 	
 	/** Fenêtre principale de l'application
@@ -55,33 +53,36 @@ public class MenuTest extends Application {
 		fenetrePrincipale.setScene(sceneOption);
 	}
 	
-	public static void desactiverOption() {
-		fenetrePrincipale.setScene(scenePrincipale);
-	}
-	
+	/**
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne la scène des règles du jeu
+	 * pour que le joueur apprene comment jouer
+	 */
 	public static void activerRegle() {
 		fenetrePrincipale.setScene(sceneRegle);
 	}
 	
-	public static void activerPlateau() {
-		fenetrePrincipale.setScene(scenePlateau);
-	}
-	
+	/**
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne la scène des options de partie
+	 * avant de commençer le jeu
+	 */
 	public static void activerOptionPartie() {
 		fenetrePrincipale.setScene(sceneOptionPartie);
 	}
 	
 	/**
-	 * Classe permettant l'apparition d'une pop-up de sauvegarde quand on veut
-	 * quitter la partie a partir du bouton sur plateauJeu.fxml
+	 * Permet de modifier toute les scènes sauf celle 
+	 * de la scène principale principale
+	 * pour qu'elle deviennent la scène principale
 	 */
-	public static void sauvegardePartieQuitter() {
-		//TODO pop-up pour la sauvegarde pour quitter la partie
+	public static void revenirDebut() {
+		fenetrePrincipale.setScene(scenePrincipale);
 	}
 	
 	/**
-	 * Classe permettant d'arrêter le programme en cours
-	 * Pour éviter de le fermer avec la croix de la fenêtre
+	 * Attribuer sur un bouton pour lançer la fermeture du programme
+	 * sans que l'utilisateur appuie sur la croix.
 	 */
 	public static void sortirProgramme() {
 		System.exit(0);
@@ -106,13 +107,14 @@ public class MenuTest extends Application {
 			FXMLLoader chargeurFXML = new FXMLLoader();
 			chargeurFXML.setLocation(getClass().getResource("testBuilder.fxml"));
 			Parent conteneur = chargeurFXML.load();
+			
 			/*
 			 * Création de la scène principale
 			 */
 			scenePrincipale = new Scene(conteneur, 600, 400);
 			
 			/*
-			 * Chargement de la vue des option et
+			 * Chargement de la vue des options et
 			 * création de la scène associée à cette vue
 			 */
 			FXMLLoader chargeurFXMLOption = new FXMLLoader();
@@ -121,7 +123,7 @@ public class MenuTest extends Application {
 			sceneOption = new Scene(conteneur, 600, 400);
 			
 			/*
-			 * Chargement de la vue des option et
+			 * Chargement de la vue des règles du jeu et
 			 * création de la scène associée à cette vue
 			 */
 			FXMLLoader chargeurFXMLRegle = new FXMLLoader();
@@ -130,22 +132,14 @@ public class MenuTest extends Application {
 			sceneRegle = new Scene(conteneur, 600, 400);
 			
 			/*
-			 * Chargement de la vue des option et
-			 * création de la scène associée à cette vue
-			 */
-			FXMLLoader chargeurFXMLPlateau = new FXMLLoader();
-			chargeurFXMLPlateau.setLocation(getClass().getResource("plateauJeu.fxml"));
-			conteneur = chargeurFXMLPlateau.load();
-			scenePlateau = new Scene(conteneur, 600, 400);
-			
-			/*
-			 * Chargement de la vue des option et
+			 * Chargement de la vue des options de partie et
 			 * création de la scène associée à cette vue
 			 */
 			FXMLLoader chargeurFXMLOptionPartie = new FXMLLoader();
 			chargeurFXMLOptionPartie.setLocation(getClass().getResource("testOptionPartie.fxml"));
 			conteneur = chargeurFXMLOptionPartie.load();
 			sceneOptionPartie = new Scene(conteneur, 600, 400);
+			
 			/*
 			 * on associe la scène principale à la fenêtre principale
 			 * Cette dernière est stockée en tant qu'attribut afin d'être accessible

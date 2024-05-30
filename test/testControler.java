@@ -10,8 +10,8 @@ import javafx.fxml.FXML;
  * c'est celle de l'addition qui s'affiche
  * - soustraction => permet de modifier la vue,
  * c'est celle de la soustraction qui s'affiche
- * @author Ajuto Matthias
- * @version 1.0
+ * @author Matthias AJUTO
+ * @version 1.1
  *
  */
 public class testControler {
@@ -23,8 +23,8 @@ public class testControler {
 	
 	@FXML
 	private void fenetrePrincipale() {
-		// échanger la vue courante avec la vue principale
-		MenuTest.desactiverOption();
+		// échanger la vue courante avec celle du menu principal
+		MenuTest.revenirDebut();
 	}
 	
 	@FXML
@@ -34,14 +34,8 @@ public class testControler {
 	}
 	
 	@FXML
-	private void scenePlateau() {
-		// échanger la vue courante avec celle du plateau
-		MenuTest.activerPlateau();
-	}
-	
-	@FXML
 	private void sceneOptionPartie() {
-		// échanger la vue courante avec celle des options de partie
+		// échanger la vue courante avec celle des options d'avant partie
 		MenuTest.activerOptionPartie();
 	}
 	
@@ -50,4 +44,5 @@ public class testControler {
 		// permet de quitter l'application sans appuyer sur la croix de la fenetre
 		MenuTest.sortirProgramme();
 	}
+	
 }

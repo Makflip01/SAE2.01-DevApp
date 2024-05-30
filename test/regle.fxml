@@ -41,6 +41,6 @@
       <Label layoutX="10.0" layoutY="280.0" prefHeight="17.0" prefWidth="572.0" text="Le renard est vainqueur si le joueur adverse ne dispose plus de suffisamment d'oies pour bloquer le renard." />
       <Label layoutX="29.0" layoutY="297.0" prefHeight="17.0" prefWidth="543.0" text="Les oies l'emportent si le renard se retrouve bloqué ou encerclé, dans l'incapacité de sauter à nouveau" />
       <Label layoutX="246.0" layoutY="314.0" prefHeight="17.0" prefWidth="108.0" text="par-dessus une oie." />
-      <Button layoutX="242.0" layoutY="344.0" mnemonicParsing="false" onAction="#fenetrePrincipale" text="Quitter les Règles" textFill="RED" />
+      <Button layoutX="477.0" layoutY="361.0" mnemonicParsing="false" onAction="#fenetrePrincipale" text="Quitter les règles" textFill="RED" />
    </children>
 </Pane>
