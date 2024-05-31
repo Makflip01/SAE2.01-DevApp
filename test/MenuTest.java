@@ -39,6 +39,9 @@ public class MenuTest extends Application {
 	/** Scène permettant de gérer les option de la partie */
 	private static Scene sceneOptionPartie;
 	
+	/** Scène permettant d'accéder à la partie */
+	private static Scene scenePartie;
+	
 	/** Fenêtre principale de l'application
 	 * La scène qui lui est associée sera modifiée en fonction
 	 * des clics de l'utilisateur
@@ -78,6 +81,15 @@ public class MenuTest extends Application {
 	 */
 	public static void revenirDebut() {
 		fenetrePrincipale.setScene(scenePrincipale);
+	}
+	
+	/**
+	 * Permet de modifier la scène de la fenêtre principale
+	 * pour qu'elle devienne la scène des options de partie
+	 * avant de commençer le jeu
+	 */
+	public static void activerPartie() {
+		fenetrePrincipale.setScene(scenePartie);
 	}
 	
 	/**
@@ -139,6 +151,15 @@ public class MenuTest extends Application {
 			chargeurFXMLOptionPartie.setLocation(getClass().getResource("testOptionPartie.fxml"));
 			conteneur = chargeurFXMLOptionPartie.load();
 			sceneOptionPartie = new Scene(conteneur, 600, 400);
+			
+			/*
+			 * Chargement de la vue des options de partie et
+			 * création de la scène associée à cette vue
+			 */
+			FXMLLoader chargeurFXMLPartie = new FXMLLoader();
+			chargeurFXMLPartie.setLocation(getClass().getResource("PlateauJeu.fxml"));
+			conteneur = chargeurFXMLPartie.load();
+			scenePartie = new Scene(conteneur, 600, 400);
 			
 			/*
 			 * on associe la scène principale à la fenêtre principale

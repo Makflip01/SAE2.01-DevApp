@@ -38,7 +38,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="90.0" text="Pseudo le ???" textFill="#0f00ff">
+      <Label layoutX="69.0" layoutY="90.0" text="Pseudo le ???" fx:id="PseudoJoueur" textFill="#0f00ff">
          <font>
             <Font size="14.0" />
          </font></Label>
@@ -47,5 +47,6 @@
             <Image url="@plateau%20fond.png" />
          </image>
       </ImageView>
+      <Button layoutX="67.0" layoutY="128.0" mnemonicParsing="false" fx:id="changerJoeur" text="Passer le tour" />
    </children>
 </Pane>
