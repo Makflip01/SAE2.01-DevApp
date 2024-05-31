@@ -47,6 +47,6 @@
             <Image url="@plateau%20fond.png" />
          </image>
       </ImageView>
-      <Button layoutX="67.0" layoutY="128.0" mnemonicParsing="false" fx:id="changerJoeur" text="Passer le tour" />
+      <Button layoutX="67.0" layoutY="128.0" mnemonicParsing="false" fx:id="changerJoueur" text="Passer le tour" />
    </children>
 </Pane>

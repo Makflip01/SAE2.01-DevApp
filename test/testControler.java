@@ -5,14 +5,11 @@ package test;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 /**
  * Classe contrôleur associée à la vue de la fenêtre principale.
- * La vue est dotée de 2 boutons :
- * - addition => permet de modifier la vue,
- * c'est celle de l'addition qui s'affiche
- * - soustraction => permet de modifier la vue,
- * c'est celle de la soustraction qui s'affiche
+ * Et des autres scène possible
  * @author Matthias AJUTO
  * @version 1.1
  *
@@ -54,18 +51,18 @@ public class testControler {
 
 	@FXML
 	private TextField Pseudo2;
-	
+
 	@FXML
 	private String Joueur1;
-	
+
 	@FXML
 	private String Joueur2;
-	
+
 	@FXML
 	private String Joueur;
-	
+
 	@FXML
-	private TextField PseudoJoueur;
+	private Label PseudoJoueur;
 
 	/**
 	 * Classe permettant d'aller dans la partie de jeu
@@ -78,27 +75,28 @@ public class testControler {
 		Joueur2 = Pseudo2.getText();
 		if(Joueur1.isBlank() || Joueur2.isBlank()) {
 			Alert boiteAlerte =
-					new Alert(Alert.AlertType.ERROR,
-							"Voici un message d'information que vous devez lire.",
-							ButtonType.YES);
+					new Alert(Alert.AlertType.WARNING,
+							"Penser a bien avoir 2 pseudos pour les 2 joueurs sinon le jeu est injouable",
+							ButtonType.OK);
 			boiteAlerte.setTitle("ATTENTION");
 			boiteAlerte.setHeaderText("Tout les champs ne sont pas compléter");
 			boiteAlerte.showAndWait();
 		} else {
 			MenuTest.activerPartie();
 			Joueur = Joueur1;
-			PseudoJoueur.setText(Joueur);
 		}
 	}
-	
+
 	@FXML
 	private void changerJoueur() {
 		if(Joueur == Joueur1) {
 			Joueur = Joueur2;
 			PseudoJoueur.setText(Joueur);
+			System.out.print(Joueur);
 		} else if(Joueur == Joueur2) {
 			Joueur = Joueur1;
 			PseudoJoueur.setText(Joueur);
+			System.out.print(Joueur);
 		}
 	}
 }

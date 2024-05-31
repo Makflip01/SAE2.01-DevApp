@@ -124,6 +124,7 @@ public class MenuTest extends Application {
 			 * Création de la scène principale
 			 */
 			scenePrincipale = new Scene(conteneur, 600, 400);
+			primaryStage.setTitle("Le Jeu de l'oie et du Renard");
 			
 			/*
 			 * Chargement de la vue des options et
