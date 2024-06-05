@@ -12,15 +12,31 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <GridPane gridLinesVisible="false" layoutX="216.0" layoutY="52.0" prefHeight="297.0" prefWidth="316.0">
+      <Button layoutX="61.0" layoutY="316.0" mnemonicParsing="false" text="Quitter la partie" textFill="RED" />
+      <Label layoutX="46.0" layoutY="52.0" text="C'est autour de :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="PseudoJoueur" layoutX="69.0" layoutY="90.0" text="Pseudo le ???" textFill="#0f00ff">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ImageView fitHeight="316.0" fitWidth="348.0" layoutX="200.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@plateau%20fond.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="changerJoueur" layoutX="67.0" layoutY="128.0" mnemonicParsing="false" text="Passer le tour" />
+      <GridPane fx:id="plateau" gridLinesVisible="true" layoutX="222.0" layoutY="47.0" prefHeight="308.0" prefWidth="331.0">
         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -32,187 +48,40 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="4" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" GridPane.rowIndex="4">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="145.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="145.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="155.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="4">
-               <image>
-                  <Image url="@plateau3.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="42.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2">
-               <image>
-                  <Image url="@plateau2.png" />
-               </image>
-            </ImageView>
+            <Button fx:id="pion33" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Button fx:id="pion32" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Button fx:id="pion31" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button fx:id="pion30" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Button fx:id="pion29" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Button fx:id="pion28" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Button fx:id="pion27" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button fx:id="pion26" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button fx:id="pion25" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Button fx:id="pion24" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="pion23" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="pion22" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="pion21" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.rowIndex="4" />
+            <Button fx:id="pion20" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button fx:id="pion19" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button fx:id="pion18" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="pion17" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button fx:id="pion16" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="pion15" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="pion14" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.rowIndex="3" />
+            <Button fx:id="pion13" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button fx:id="pion12" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button fx:id="pion11" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="pion10" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="pion9" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button fx:id="pion8" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="pion7" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.rowIndex="2" />
+            <Button fx:id="pion6" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="pion5" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="pion4" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="pion3" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="4" />
+            <Button fx:id="pion2" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="3" />
+            <Button fx:id="pion1" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="25.0" prefWidth="0.0" text="Button" GridPane.columnIndex="2" />
          </children>
       </GridPane>
-      <Button layoutX="61.0" layoutY="316.0" mnemonicParsing="false" text="Quitter la partie" textFill="RED" />
-      <Label layoutX="46.0" layoutY="52.0" text="C'est autour de :">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="88.0" layoutY="90.0" text="Pseudo" textFill="#0f00ff">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
    </children>
 </Pane>
